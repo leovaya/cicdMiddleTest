@@ -1,16 +1,18 @@
-from text_analyzer import TextAnalyzer  # Імпортуємо клас
+from text_analyzer import TextAnalyzer 
+
+
 def main():
-    file_path = "test_file.txt"  # Вкажи свій файл
+    file_path = "text_file.txt"  
 
     try:
-        analyzer = TextAnalyzer(file_path)  # Створюємо об'єкт
-        words, sentences = analyzer.analyze()  # Викликаємо метод аналізу
+        analyzer = TextAnalyzer(file_path) 
+        words, sentences = analyzer.analyze()  
 
         print(f"Кількість слів: {words}")
         print(f"Кількість речень: {sentences}")
 
     except FileNotFoundError:
-        print("Помилка: Файл не знайдено! Переконайтеся, що 'test_file.txt' існує.")
+        print("Помилка: Файл не знайдено! Переконайтеся, що 'text_file.txt' існує.")
     except Exception as e:
         print(f"Сталася помилка: {e}")
 
